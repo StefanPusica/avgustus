@@ -1,9 +1,11 @@
 <style>
     @media (max-width: 640px) {
-        .hero { background-image: url('{{ asset('images/hero-background-smscreen.png') }}') !important; }
+        .hero {
+            background-image: url('{{ asset('images/hero-background-smscreen.png') }}') !important;
+        }
     }
 </style>
-<section class="hero" style="background-image: url('{{ asset('images/hero-background.png') }}')">
+<section class="hero" style="background-image: url('{{ asset('images/hero-background-vilaborova.png') }}')">
     <div class="container">
         <div class="hero-content">
             <div class="hero-label">TV I MOBILNA APLIKACIJA ZA APARTMANE</div>
