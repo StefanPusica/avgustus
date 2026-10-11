@@ -1,6 +1,6 @@
 @props([
     'label',
-    'background',
+    'background' => null,
     'mobileBackground' => null,
 ])
 
@@ -15,7 +15,7 @@
         }
     }
 </style>
-<section {{ $attributes->class('hero') }} style="background-image: url('{{ $background }}')">
+<section {{ $attributes->class('hero') }} @if ($background) style="background-image: url('{{ $background }}')" @endif>
     <div class="container">
         <div class="hero-content">
             <div class="hero-label">{{ $label }}</div>
@@ -24,5 +24,8 @@
             <div class="hero-cta">{{ $cta }}</div>
             {{ $slot }}
         </div>
+        @isset($visual)
+            <div class="hero-visual">{{ $visual }}</div>
+        @endisset
     </div>
 </section>

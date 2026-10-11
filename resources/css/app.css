@@ -339,6 +339,355 @@ a {
     max-width: 580px;
 }
 
+.hero--admin .hero-content {
+    max-width: 640px;
+}
+
+.hero--admin .hero-sub {
+    max-width: 580px;
+}
+
+.hero-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px 32px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.hero-features li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 500;
+    color: var(--color-dark);
+}
+
+.hero-features svg {
+    color: var(--color-dark-2);
+    flex-shrink: 0;
+}
+
+.hero--admin .container {
+    display: grid;
+    grid-template-columns: minmax(0, 640px) minmax(0, 1fr);
+    gap: 48px;
+    align-items: center;
+}
+
+.admin-flow {
+    position: relative;
+    width: 100%;
+    max-width: 760px;
+    margin-left: auto;
+    aspect-ratio: 60 / 47;
+}
+
+.admin-flow::before {
+    content: '';
+    position: absolute;
+    inset: -10%;
+    background:
+        radial-gradient(30% 32% at 50% 28%, rgba(195, 142, 79, 0.22), transparent),
+        radial-gradient(30% 26% at 30% 80%, rgba(37, 88, 77, 0.12), transparent),
+        radial-gradient(20% 24% at 82% 80%, rgba(37, 88, 77, 0.12), transparent);
+    pointer-events: none;
+    animation: admin-flow-fade 1.6s ease-out both;
+}
+
+.admin-flow img {
+    position: absolute;
+    height: auto;
+    z-index: 1;
+}
+
+.admin-flow-laptop {
+    top: 0;
+    left: 17%;
+    width: 66%;
+    z-index: 2;
+    animation: admin-flow-laptop 2.4s ease-in-out both;
+}
+
+.admin-flow-tv {
+    top: 54.3%;
+    left: 0;
+    width: 62.4%;
+    animation: admin-flow-tv 1.2s ease-out 2.4s both;
+}
+
+.admin-flow-phone {
+    top: 54.3%;
+    right: 0;
+    width: 31.2%;
+    animation: admin-flow-phone 1.2s ease-out 4.8s both;
+}
+
+.admin-flow-links {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    overflow: visible;
+}
+
+.admin-flow-line {
+    stroke: var(--color-accent);
+    stroke-width: 1.5;
+    stroke-linecap: round;
+    stroke-opacity: 0.7;
+    stroke-dasharray: 1;
+    animation: admin-flow-draw 0.8s ease-in-out both;
+}
+
+.admin-flow-line--tv {
+    animation-delay: 3.6s;
+}
+
+.admin-flow-line--phone {
+    animation-delay: 6s;
+}
+
+.admin-flow-dot {
+    fill: var(--color-accent);
+}
+
+.admin-flow-card {
+    position: absolute;
+    z-index: 4;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 16px 10px 10px;
+    background: var(--color-white);
+    border-radius: 999px;
+    box-shadow: 0 12px 32px rgba(3, 58, 49, 0.14);
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--color-dark);
+    white-space: nowrap;
+}
+
+.admin-flow-card-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: var(--color-dark-2);
+    color: var(--color-white);
+}
+
+.admin-flow-cards {
+    position: absolute;
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+}
+
+.admin-flow-cards .admin-flow-card {
+    position: relative;
+    animation: admin-flow-card-in 0.5s ease-out both;
+}
+
+.admin-flow-cards--tv {
+    right: 92%;
+    bottom: 4%;
+    animation: float 5s ease-in-out 6.3s infinite;
+}
+
+.admin-flow-cards--tv .admin-flow-card:nth-child(1) {
+    animation-delay: 4.6s;
+}
+
+.admin-flow-cards--tv .admin-flow-card:nth-child(2) {
+    animation-delay: 5.2s;
+}
+
+.admin-flow-cards--tv .admin-flow-card:nth-child(3) {
+    animation-delay: 5.8s;
+}
+
+.admin-flow-cards--phone {
+    right: -2%;
+    bottom: 6%;
+    animation: float 5s ease-in-out 8.7s infinite;
+}
+
+.admin-flow-cards--phone .admin-flow-card:nth-child(1) {
+    animation-delay: 7s;
+}
+
+.admin-flow-cards--phone .admin-flow-card:nth-child(2) {
+    animation-delay: 7.6s;
+}
+
+.admin-flow-cards--phone .admin-flow-card:nth-child(3) {
+    animation-delay: 8.2s;
+}
+
+@keyframes admin-flow-laptop {
+    0% {
+        top: 26.3%;
+        opacity: 0;
+        transform: scale(0.92);
+    }
+    35%, 50% {
+        top: 26.3%;
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        top: 0;
+    }
+}
+
+@keyframes admin-flow-tv {
+    from {
+        opacity: 0;
+        transform: translate(25%, -35%) scale(0.85);
+    }
+}
+
+@keyframes admin-flow-phone {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -35%) scale(0.85);
+    }
+}
+
+@keyframes admin-flow-draw {
+    from {
+        stroke-dashoffset: 1;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes admin-flow-fade {
+    from {
+        opacity: 0;
+    }
+}
+
+@keyframes admin-flow-card-in {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .admin-flow::before,
+    .admin-flow img,
+    .admin-flow-line,
+    .admin-flow-cards,
+    .admin-flow-card {
+        animation: none;
+    }
+
+    .admin-flow-dot {
+        display: none;
+    }
+}
+
+@media (min-width: 1761px) {
+    .admin-flow-tv {
+        left: -16%;
+    }
+
+    .admin-flow-cards--tv {
+        right: 108%;
+    }
+
+    .admin-flow-cards--phone {
+        right: 26%;
+    }
+}
+
+@media (max-width: 1760px) {
+    .admin-flow-cards--tv {
+        right: auto;
+        left: 2%;
+        bottom: 2%;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 1024px) {
+    .hero--admin .container {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 0;
+    }
+
+    .hero--admin .hero-content {
+        display: contents;
+    }
+
+    .hero--admin .hero-visual {
+        order: 1;
+        margin-top: 24px;
+    }
+
+    .hero--admin .hero-sub,
+    .hero--admin .hero-cta,
+    .hero--admin .hero-features {
+        order: 2;
+    }
+
+    .admin-flow {
+        margin: 0 auto 180px;
+    }
+
+    .admin-flow-card {
+        padding: 6px 12px 6px 6px;
+        font-size: 0.75rem;
+        white-space: normal;
+    }
+
+    .admin-flow-cards {
+        top: calc(100% + 12px);
+        bottom: auto;
+        animation: none;
+    }
+
+    .admin-flow-cards--tv {
+        right: auto;
+        left: 0;
+        max-width: 58%;
+        align-items: flex-start;
+    }
+
+    .admin-flow-cards--phone {
+        right: 0;
+        max-width: 38%;
+    }
+
+    .admin-flow-card-icon {
+        flex-shrink: 0;
+        width: 22px;
+        height: 22px;
+    }
+}
+
+@media (max-width: 640px) {
+    .admin-flow {
+        margin-bottom: 230px;
+    }
+}
+
+@media (max-width: 440px) {
+    .admin-flow {
+        margin-bottom: 270px;
+    }
+}
+
 .hero-stores {
     display: flex;
     gap: 12px;
@@ -1527,7 +1876,8 @@ a {
     }
 
     .hero-platform-logos,
-    .hero-stores {
+    .hero-stores,
+    .hero-features {
         justify-content: center;
     }
 
