@@ -4,38 +4,28 @@
 
 @section('content')
 
-    <style>
-        @media (max-width: 640px) {
-            .hero {
-                background-image: url('{{ asset('images/hero-background-smscreen.png') }}') !important;
-            }
-        }
-    </style>
-    <section class="hero" style="background-image: url('{{ asset('images/hero-background-vilaborova.png') }}')">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-label">TV APLIKACIJA ZA APARTMANE</div>
-                <h1>Vaš apartman. Vaš brend.<br><span class="text-accent">Dobrodošlica za svakog gosta.</span></h1>
-                <p class="hero-sub">
-                    Personalizovana TV aplikacija koja dočekuje gosta po imenu
-                    i na jednom mestu mu pruža sve informacije, preporuke
-                    i usluge potrebne tokom boravka.
-                </p>
-                <div class="hero-cta">
-                    <a href="{{ url('/kontakt') }}" class="btn btn-primary btn-lg">Zatražite demo &rarr;</a>
-                    <a href="#tv-features" class="btn btn-outline btn-lg">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="12" cy="12" r="10" />
-                            <polygon points="10 8 16 12 10 16 10 8" fill="currentColor" stroke="none" />
-                        </svg>
-                        Pogledajte kako funkcioniše
-                    </a>
-                </div>
-                <x-hero.hero-platforms />
-            </div>
-        </div>
-    </section>
+    <x-hero.hero label="TV APLIKACIJA ZA APARTMANE"
+        :background="asset('images/hero-background-vilaborova.png')"
+        :mobile-background="asset('images/hero-background-smscreen.png')">
+        <x-slot:title>Vaš apartman. Vaš brend.<br><span class="text-accent">Dobrodošlica za svakog gosta.</span></x-slot:title>
+        <x-slot:sub>
+            Personalizovana TV aplikacija koja dočekuje gosta po imenu
+            i na jednom mestu mu pruža sve informacije, preporuke
+            i usluge potrebne tokom boravka.
+        </x-slot:sub>
+        <x-slot:cta>
+            <a href="{{ url('/kontakt') }}" class="btn btn-primary btn-lg">Zatražite demo &rarr;</a>
+            <a href="#tv-features" class="btn btn-outline btn-lg">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10" />
+                    <polygon points="10 8 16 12 10 16 10 8" fill="currentColor" stroke="none" />
+                </svg>
+                Pogledajte kako funkcioniše
+            </a>
+        </x-slot:cta>
+        <x-hero.hero-platforms />
+    </x-hero.hero>
 
     <section class="tv-intro">
         <div class="container">
