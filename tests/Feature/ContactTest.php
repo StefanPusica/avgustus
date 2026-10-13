@@ -4,11 +4,11 @@ namespace Tests\Feature;
 
 use Tests\TestCase;
 
-class KontaktTest extends TestCase
+class ContactTest extends TestCase
 {
-    public function test_kontakt_page_renders_form_and_faq(): void
+    public function test_contact_page_renders_form_and_faq(): void
     {
-        $response = $this->get(route('kontakt'));
+        $response = $this->get(route('contact'));
 
         $response->assertOk();
         $response->assertSee('Kontaktirajte');
@@ -18,7 +18,7 @@ class KontaktTest extends TestCase
 
     public function test_valid_message_redirects_with_status(): void
     {
-        $response = $this->post(route('kontakt.store'), [
+        $response = $this->post(route('contact.store'), [
             'name' => 'Petar Petrović',
             'email' => 'petar@primer.rs',
             'phone' => '641234567',
@@ -26,13 +26,13 @@ class KontaktTest extends TestCase
             'message' => 'Zanima me demo aplikacije.',
         ]);
 
-        $response->assertRedirect(route('kontakt'));
+        $response->assertRedirect(route('contact'));
         $response->assertSessionHas('status');
     }
 
     public function test_required_fields_are_validated(): void
     {
-        $response = $this->post(route('kontakt.store'), ['topic' => 'nepostojeca']);
+        $response = $this->post(route('contact.store'), ['topic' => 'nepostojeca']);
 
         $response->assertSessionHasErrors(['name', 'email', 'topic', 'message']);
         $response->assertSessionDoesntHaveErrors('phone');

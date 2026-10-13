@@ -17,7 +17,7 @@
                     <div class="contact-alert" role="status">{{ session('status') }}</div>
                 @endif
 
-                <form method="POST" action="{{ route('kontakt.store') }}" class="contact-form" novalidate>
+                <form method="POST" action="{{ route('contact.store') }}" class="contact-form" novalidate>
                     @csrf
 
                     <div class="contact-field">
@@ -54,7 +54,7 @@
                         <label for="topic">Tema upita <span class="contact-required">*</span></label>
                         <select id="topic" name="topic" required>
                             <option value="" disabled @selected(!old('topic'))>Izaberite temu</option>
-                            @foreach (\App\Http\Requests\KontaktRequest::TOPICS as $value => $label)
+                            @foreach (\App\Http\Requests\ContactRequest::TOPICS as $value => $label)
                                 <option value="{{ $value }}" @selected(old('topic') === $value)>{{ $label }}</option>
                             @endforeach
                         </select>

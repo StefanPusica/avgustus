@@ -5,14 +5,14 @@ namespace App\Http\Requests;
 use Illuminate\Contracts\Validation\ValidationRule;
 use Illuminate\Foundation\Http\FormRequest;
 
-class KontaktRequest extends FormRequest
+class ContactRequest extends FormRequest
 {
     public const TOPICS = [
         'demo' => 'Zahtev za demo',
-        'cene' => 'Cene i paketi',
-        'podrska' => 'Tehnička podrška',
-        'saradnja' => 'Saradnja',
-        'ostalo' => 'Ostalo',
+        'pricing' => 'Cene i paketi',
+        'support' => 'Tehnička podrška',
+        'partnership' => 'Saradnja',
+        'other' => 'Ostalo',
     ];
 
     public function authorize(): bool

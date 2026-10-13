@@ -27,11 +27,11 @@
                 <a href="{{ url('/platforma') }}" class="{{ request()->is('platforma') ? 'active' : '' }}">Platforma</a>
                 <a href="{{ url('/cenovnik') }}" class="{{ request()->is('cenovnik') ? 'active' : '' }}">Cenovnik</a>
                 <a href="{{ url('/o-nama') }}" class="{{ request()->is('o-nama') ? 'active' : '' }}">O nama</a>
-                <a href="{{ url('/kontakt') }}" class="{{ request()->is('kontakt') ? 'active' : '' }}">Kontakt</a>
+                <a href="{{ url('/kontakt') }}" class="{{ request()->is('contact') ? 'active' : '' }}">Kontakt</a>
             </nav>
 
             <div class="header-actions">
-                <a href="{{ url('/kontakt') }}" class="btn btn-primary">Zatraži demo</a>
+                <a href="{{ route('request-demo') }}" class="btn btn-primary">Zatraži demo</a>
                 <div class="lang-switcher">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                         stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
