@@ -102,5 +102,7 @@
             </div>
         </x-slot:visual>
     </x-hero.hero>
+    <x-admin-features />
+    <x-business-analytics />
 
 @endsection
