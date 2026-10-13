@@ -3394,3 +3394,283 @@ a {
         grid-template-columns: 1fr;
     }
 }
+
+/* ============================================================
+   Contact Page
+   ============================================================ */
+.contact-page {
+    padding: 64px 0 90px;
+}
+
+.contact-page .container {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    max-width: 1100px;
+}
+
+.contact-card {
+    padding: 48px;
+    background: rgba(255, 255, 255, 0.45);
+    border-radius: 18px;
+    box-shadow: 0 6px 24px rgba(3, 58, 49, 0.05);
+}
+
+.contact-label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+    margin-bottom: 14px;
+}
+
+.contact-header {
+    text-align: center;
+    margin-bottom: 36px;
+}
+
+.contact-header h1,
+.contact-faq-intro h2 {
+    font-size: clamp(1.8rem, 3.2vw, 2.8rem);
+    font-weight: 800;
+    letter-spacing: -0.8px;
+    line-height: 1.15;
+    color: var(--color-dark);
+    margin-bottom: 12px;
+}
+
+.contact-header h1 .text-accent-gold,
+.contact-faq-intro h2 .text-accent-gold {
+    color: var(--color-accent);
+}
+
+.contact-header p,
+.contact-faq-intro p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--color-text);
+}
+
+.contact-alert {
+    margin-bottom: 24px;
+    padding: 14px 18px;
+    border-radius: var(--radius-sm);
+    background: rgba(3, 58, 49, 0.08);
+    border: 1px solid var(--color-border);
+    color: var(--color-dark);
+    font-weight: 600;
+}
+
+.contact-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px 28px;
+}
+
+.contact-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 0;
+}
+
+.contact-field--full {
+    grid-column: 1 / -1;
+}
+
+.contact-field label {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--color-dark);
+}
+
+.contact-required {
+    color: var(--color-accent);
+}
+
+.contact-field input,
+.contact-field select,
+.contact-field textarea {
+    width: 100%;
+    padding: 13px 16px;
+    font: inherit;
+    font-size: 0.95rem;
+    color: var(--color-text);
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-field textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+.contact-field select {
+    appearance: none;
+    padding-right: 44px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23033A31' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    cursor: pointer;
+}
+
+.contact-field select:invalid {
+    color: rgba(48, 58, 64, 0.55);
+}
+
+.contact-field input::placeholder,
+.contact-field textarea::placeholder {
+    color: rgba(48, 58, 64, 0.55);
+}
+
+.contact-field input:focus,
+.contact-field select:focus,
+.contact-field textarea:focus,
+.contact-phone:focus-within {
+    outline: none;
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 3px var(--color-accent-light);
+}
+
+.contact-phone {
+    display: flex;
+    align-items: stretch;
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-phone-prefix {
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--color-dark);
+    border-right: 1px solid var(--color-border);
+}
+
+.contact-phone input,
+.contact-phone input:focus {
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.contact-error {
+    font-size: 0.85rem;
+    color: #b3261e;
+}
+
+.contact-submit {
+    justify-content: center;
+    width: 100%;
+    margin-top: 4px;
+    background: var(--color-dark);
+    border-color: var(--color-dark);
+}
+
+.contact-submit:hover {
+    background: var(--color-dark-2);
+    border-color: var(--color-dark-2);
+}
+
+.contact-note {
+    text-align: center;
+    font-size: 0.88rem;
+    color: var(--color-text-muted);
+}
+
+.contact-faq {
+    display: grid;
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+    gap: 48px;
+    align-items: start;
+}
+
+.contact-faq-intro h2 {
+    margin-bottom: 20px;
+}
+
+.contact-faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact-faq-item {
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    transition: border-color 0.2s ease;
+}
+
+.contact-faq-item[open] {
+    border-color: rgba(195, 142, 79, 0.5);
+}
+
+.contact-faq-item summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 15px 18px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--color-dark);
+    cursor: pointer;
+    list-style: none;
+}
+
+.contact-faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.contact-faq-item summary::after {
+    content: '+';
+    flex-shrink: 0;
+    font-size: 1.3rem;
+    font-weight: 500;
+    line-height: 1;
+    color: var(--color-dark);
+    transition: transform 0.2s ease;
+}
+
+.contact-faq-item[open] summary::after {
+    transform: rotate(45deg);
+    color: var(--color-accent);
+}
+
+.contact-faq-item p {
+    padding: 0 18px 16px;
+    font-size: 0.93rem;
+    line-height: 1.65;
+    color: var(--color-text);
+}
+
+@media (max-width: 900px) {
+    .contact-faq {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+}
+
+@media (max-width: 640px) {
+    .contact-page {
+        padding: 40px 0 64px;
+    }
+
+    .contact-card {
+        padding: 28px 20px;
+    }
+
+    .contact-form {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
