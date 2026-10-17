@@ -4142,3 +4142,141 @@ fieldset.contact-field {
         font-size: 0.82rem;
     }
 }
+
+/* ============================================================
+   About Page
+   ============================================================ */
+.about-page {
+    padding: 64px 0 90px;
+}
+
+.about-page .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+}
+
+.about-card {
+    padding: 40px 44px;
+    background: rgba(255, 255, 255, 0.45);
+    border-radius: 18px;
+    box-shadow: 0 6px 24px rgba(3, 58, 49, 0.05);
+}
+
+.about-card--wide {
+    grid-column: 1 / -1;
+}
+
+.about-card--light {
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.about-card--dark {
+    text-align: center;
+    background: var(--color-dark);
+}
+
+.about-label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+    margin-bottom: 14px;
+}
+
+.about-card h1,
+.about-card h2 {
+    font-size: clamp(1.6rem, 2.6vw, 2.2rem);
+    font-weight: 800;
+    letter-spacing: -0.6px;
+    line-height: 1.15;
+    color: var(--color-dark);
+    margin-bottom: 16px;
+}
+
+.about-card h1 {
+    font-size: clamp(2rem, 4vw, 3.2rem);
+}
+
+.about-card h1 .text-accent-gold,
+.about-card h2 .text-accent-gold {
+    display: block;
+    color: var(--color-accent);
+}
+
+.about-card > p {
+    max-width: 70ch;
+    font-size: 1.0625rem;
+    line-height: 1.7;
+    color: var(--color-text);
+}
+
+.about-card--dark .about-label {
+    color: var(--color-accent);
+}
+
+.about-card--dark h2 {
+    color: var(--color-white);
+}
+
+.about-card--dark > p {
+    margin: 0 auto;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.about-focus {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    margin-top: 8px;
+    list-style: none;
+}
+
+.about-focus-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    margin-bottom: 14px;
+    border-radius: 50%;
+    background: rgba(195, 142, 79, 0.22);
+    color: var(--color-dark);
+    font-weight: 700;
+}
+
+.about-focus-item h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--color-dark);
+    margin-bottom: 6px;
+}
+
+.about-focus-item p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--color-text);
+}
+
+@media (max-width: 900px) {
+    .about-page .container {
+        grid-template-columns: 1fr;
+    }
+
+    .about-focus {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+}
+
+@media (max-width: 640px) {
+    .about-page {
+        padding: 40px 0 64px;
+    }
+
+    .about-card {
+        padding: 28px 20px;
+    }
+}

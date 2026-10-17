@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AboutController;
 use App\Http\Controllers\AdminPanelController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomeController;
@@ -18,3 +19,4 @@ Route::post('/kontakt', [ContactController::class, 'store'])->name('contact.stor
 Route::get('/zatrazi-demo', [RequestDemoController::class, 'index'])->name('request-demo');
 Route::post('/zatrazi-demo', [RequestDemoController::class, 'store'])->name('request-demo.store');
 Route::get('/cenovnik', [PricingController::class, 'index'])->name('pricing');
+Route::get('/o-nama', [AboutController::class, 'index'])->name('about');
