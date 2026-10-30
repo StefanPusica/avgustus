@@ -15,6 +15,21 @@
             eApartman platforma povezuje vas i vaše goste – kroz televizor, mobilnu aplikaciju i admin panel. Više
             od informacija – pravo iskustvo boravka.
         </x-slot:sub>
+        <x-slot:mobile-visual>
+            <div class="hero-devices">
+                <img class="hero-device hero-device--left"
+                    src="{{ asset('images/eApartman Dashboard Laptop Mockup.png') }}" alt="Admin panel">
+                <img class="hero-device hero-device--middle" src="{{ asset('images/tv-device-dashboard.png') }}"
+                    alt="TV aplikacija">
+                <img class="hero-device hero-device--right" src="{{ asset('images/phone-mockup-calendar.png') }}"
+                    alt="Mobilna aplikacija">
+            </div>
+            <ul class="hero-devices-labels">
+                <li>Admin panel</li>
+                <li>TV aplikacija</li>
+                <li>Mobilna aplikacija</li>
+            </ul>
+        </x-slot:mobile-visual>
         <x-slot:cta>
             <a href="#contact" class="btn btn-primary btn-lg">Saznajte više</a>
             <a href="#video" class="btn btn-outline btn-lg">

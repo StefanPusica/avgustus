@@ -21,6 +21,9 @@
             <div class="hero-label">{{ $label }}</div>
             <h1>{{ $title }}</h1>
             <p class="hero-sub">{{ $sub }}</p>
+            @isset($mobileVisual)
+                <div class="hero-mobile-visual">{{ $mobileVisual }}</div>
+            @endisset
             <div class="hero-cta">{{ $cta }}</div>
             {{ $slot }}
         </div>

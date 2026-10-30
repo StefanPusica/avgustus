@@ -13,6 +13,17 @@
             i na jednom mestu mu pruža sve informacije, preporuke
             i usluge potrebne tokom boravka.
         </x-slot:sub>
+        <x-slot:mobile-visual>
+            <div class="hero-tv-stage">
+                <img class="hero-tv-stage-image" src="{{ asset('images/smartTVapplicationMockup.png') }}"
+                    alt="TV aplikacija">
+                <ul class="hero-tv-notifications">
+                    @foreach (['Wi-Fi', 'Restorani', 'Izleti', 'Kućni red', 'Taxi', 'Live TV', 'Video vodiči'] as $notification)
+                        <li style="--i: {{ $loop->index }}">{{ $notification }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        </x-slot:mobile-visual>
         <x-slot:cta>
             <a href="{{ url('/kontakt') }}" class="btn btn-primary btn-lg">Zatražite demo &rarr;</a>
             <a href="#tv-features" class="btn btn-outline btn-lg">

@@ -12,6 +12,9 @@
             platite sigurno online, ostvarite popuste i pristupite svim informacijama
             o svom boravku – na jednom mjestu, u eApartman mobilnoj aplikaciji.
         </x-slot:sub>
+        <x-slot:mobileVisual>
+            <img src="{{ asset('images/mobile-mockup.png') }}" alt="Mobilna aplikacija">
+        </x-slot:mobileVisual>
         <x-slot:cta>
             <a href="{{ url('/kontakt') }}" class="btn btn-primary btn-lg">Zatražite demo &rarr;</a>
             <a href="#mobile-features" class="btn btn-outline btn-lg">
